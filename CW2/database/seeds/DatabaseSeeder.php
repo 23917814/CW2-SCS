@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        // Brings all of the seeders together to seed them into the database.
         // $this->call(UsersTableSeeder::class);
         $this->call(SurveysTableSeeder::class);
         $this->call(QuestionsTableSeeder::class);

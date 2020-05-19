@@ -12,6 +12,12 @@ class CreateSurveysTable extends Migration
      */
     public function up()
     {
+        /** Create the surveys table, with the fields of:
+         * surveyid as an increment
+         * title as a string
+         * description as a string
+         * liveStatus as a boolean
+         */
         Schema::create('surveys', function (Blueprint $table) {
             $table->increments('surveyid');
             $table->string('title');

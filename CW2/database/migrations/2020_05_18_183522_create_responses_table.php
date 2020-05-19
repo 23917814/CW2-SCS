@@ -12,6 +12,9 @@ class CreateResponsesTable extends Migration
      */
     public function up()
     {
+        /** Create the surveys table, with the fields of: 
+         * responseid as an increment
+        */
         Schema::create('responses', function (Blueprint $table) {
             $table->increments('responseid');
         });
