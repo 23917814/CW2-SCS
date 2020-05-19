@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\surveys;
 
 class AdminSurveysController extends Controller
 {
@@ -18,4 +19,14 @@ class AdminSurveysController extends Controller
     {
         return view('admin/surveys');
     }
+
+
+     public function store(Request $request)
+     {
+        $input = $request->all();
+
+        survey::create($input);
+
+        return redirect('admin/survey');
+     }
   }

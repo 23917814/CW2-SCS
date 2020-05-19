@@ -6,6 +6,7 @@
 
   use App\Http\Requests;
   use App\Http\Controllers\Controller;
+  use App\survey;
 
   class HomeController extends Controller
   {
@@ -16,6 +17,8 @@
        */
       public function index()
       {
-          return view('home');
+          $survey = survey::all();
+
+          return view('home', ['surveys' => $survey]);
       }
     }

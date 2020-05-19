@@ -1,12 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Survey</title>
-</head>
-<body>
-<h1>Please fill in the details below to create a new survey. </h1>
-<button><a href="/admin/surveys">Back home.</a></button>
-</body>
-</html>
+<!doctype html>
+  <html>
+  <head>
+      <meta charset="UTF-8">
+      <title>Create Survey</title>
+  </head>
+  <body>
+      <article class="row">
+          <h1>Create a new survey</h1>
+
+          {!! Form::open(['url' => 'admin/surveys']) !!}
+            <div>
+                {!! Form::label('title', 'Title:') !!}
+                {!! Form::text('title', null, ['class' => 'form-control']) !!}
+            </div>
+            <div>
+                {!! Form::label('description', 'Description:') !!}
+                {!! Form::text('description', null, ['class' => 'form-control']) !!}
+            </div>
+
+            <div>
+                {!! Form::submit('Add Survey', ['class' => 'btn btn-primary form-control']) !!}
+
+          {!! Form::close() !!}
+      </article>
+  </div>
+  </body>
+  </html>
