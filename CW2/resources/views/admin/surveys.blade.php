@@ -34,6 +34,32 @@
     @endif
 </section>
 
+<h2> Here are the questions for these surveys. </h2>
+<!-- If statement to print all rows of the questions table -->
+<section>
+    @if (isset ($questions))
+        <table>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Text</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($questions as $question)
+                    <tr>
+                        <td>{{ $question->questionid }}</td>
+                        <td>{{ $question->text }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    @else
+      <!-- If no questions in the table, print this.-->
+    <p> No questions currently avaliable. </p>
+    @endif
+</section>
+
 <!-- Nav buttons -->
 <button><a href="survey/create">Create Survey</a></button>
 <button><a href="/">Log Out</a></button>

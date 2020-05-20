@@ -23,6 +23,7 @@
                     <tr>
                         <td>{{ $survey->title }}</td>
                         <td>{{ $survey->description }}</td>
+                        <td><button> Take this Questionnaire </button></td>
                     </tr>
                 @endforeach
             </tbody>

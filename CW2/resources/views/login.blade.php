@@ -15,10 +15,9 @@
 <!-- Sets type for this to "password" so test is set to dots not letters for security -->
 <label for="password">Password:</label><br>
 <input type="password" name="password"></br>
-<input type="button" value="Submit">
+<button><a href="/admin/surveys">Log In</a></button>
 </form> 
 
 <!-- Nav buttons -->
 <button><a href="/">Back to home.</a></button>
-<button><a href="/admin/surveys">Admin Home</a></button>
 @endsection

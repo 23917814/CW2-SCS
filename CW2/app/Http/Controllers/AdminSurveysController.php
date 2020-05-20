@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\survey;
+use App\question;
+use App\answer;
 
 class AdminSurveysController extends Controller
 {
@@ -22,8 +24,10 @@ class AdminSurveysController extends Controller
     public function index()
     {
           $survey = survey::all();
+          $question = question::all();
+          $answer =  answer::all();
 
-          return view('admin/surveys', ['surveys' => $survey]);
+          return view('admin/surveys', ['surveys' => $survey], ['questions' => $question], ['answers' => $answer]);
     }
 
     /** Store the user input in the survey database,
