@@ -14,6 +14,8 @@
        *
        * @return \Illuminate\Http\Response
        */
+
+       // Return the login page.
       public function index()
       {
           return view('login');

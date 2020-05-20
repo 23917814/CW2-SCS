@@ -15,6 +15,10 @@ class AdminSurveysController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     /** Sets the variable $survey to contain all data in the survey database
+      * then return the view of admin/surveys with that variable
+      */
     public function index()
     {
           $survey = survey::all();
@@ -22,6 +26,9 @@ class AdminSurveysController extends Controller
           return view('admin/surveys', ['surveys' => $survey]);
     }
 
+    /** Store the user input in the survey database,
+     * and redirect the user to admin/surveys
+     */
      public function store(Request $request)
      {
         $input = $request->all();

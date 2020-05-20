@@ -11,6 +11,10 @@ class AnswersTableSeeder extends Seeder
      */
     public function run()
     {
+        /** Assign data to their respective variables 
+         * set in rows - for example, the first row's 
+         * data is 1, and PHP.
+         */
         DB::table('answers')->insert([
             ['answerID' => 1, 'text' => "PHP"],
             ['answerID' => 2, 'text' => "JavaScript"],

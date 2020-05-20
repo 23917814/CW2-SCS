@@ -34,6 +34,10 @@ class CreateSurveyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+     /** Sets the variable $survey to contain all data in the survey database
+      * then return the view of admin/surveys with that variable
+      */
     public function store(Request $request)
     {
         $input = $request->all();

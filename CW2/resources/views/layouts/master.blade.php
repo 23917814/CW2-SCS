@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Creating the master template for the other blades -->
 <html>
 <head>
     <meta charset="utf-8">
